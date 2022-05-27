@@ -9,15 +9,17 @@
     grid-template-rows: 50px 70px 60px auto 60px auto;
     background-color: #f1f5f9;
     min-width: 875px;
+    grid-auto-rows: auto;
+    height: 100vh;
 }
 
 .dashboard {
     color: white;
     background-color: #3b82f6;
     gap: 50px;
-    padding: 20px 20px 80px 20px;
-    height: 100vh;
-    grid-template-rows: 50px 250px 100px;
+    padding: 0px 20px 0 20px;
+    height: 100%;
+    grid-template-rows: 50px 250px 1fr;
     display: grid;
     grid-row: 1/7;
     grid-column: 1;
@@ -28,16 +30,16 @@
     align-items: center;
     grid-template-columns: 15% 85%;
     gap: 20px;
-    font-size: clamp(0.7rem, 1.3vw, 1rem);
 }
 
 .logo>svg{
-    min-width: 32px;
-    min-height: 32px;
+    width: 45px;
+    height: 45px;
 }
 
 .logo>h1{
     color: white!important;
+    font-size: clamp(1.1rem, 1.8vw, 1.6rem);
 }
 
 .logo:hover{
@@ -63,12 +65,13 @@
 
 .search-bar {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 4fr 1fr;
     grid-row: 1;
-    padding: 20px 40px 0 40px;
+    padding: 10px 60px 0 40px;
     background-color: white;
     grid-column: 2/4;
     z-index: 1;
+    align-items: center;
 }
 
 .search-form{
@@ -106,7 +109,7 @@
     display: grid;
     justify-items: end;
     align-items: center;
-    grid-template-columns: 1fr 30% 3fr;
+    grid-template-columns: 1fr 2fr 4fr;
 }
 
 .notifications>ul>li {
@@ -116,8 +119,8 @@
 .user-bar {
     display: grid;
     background-color: white;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0px 40px 0 40px;
+    grid-template-columns: 4fr 1fr;
+    padding: 0px 60px 0 40px;
     grid-row: 2;
     grid-column: 2/4;
     box-shadow: 0 4px 10px -5px #888888;
@@ -125,18 +128,41 @@
 
 .user {
     display: grid;
-    grid-template-columns: 10% 90%;
     align-items: center;
+    grid-template-columns: 60px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-name>p{
+    font-weight: bold;
+}
+
+.user-name>h1{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .user-tools {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     align-items: center;
-    justify-items: center;
+    justify-items: end;
 }
 
-.user-tools>ul>button {
+.user-tools>button {
+    color: white;
+    font-weight: bold;
+    border:none;
+    background-color: #3b82f6;
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+}
+
+.user-tools>button:hover{
+    color: black;
+    cursor: pointer;
 }
 
 .content-bar-1 {
