@@ -6,17 +6,16 @@
 .container {
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 50px 70px 60px auto 60px auto;
+    grid-template-rows: 50px 70px 60px 1fr 60px 1fr;
     background-color: #f1f5f9;
     min-width: 875px;
     grid-auto-rows: auto;
-    height: 100vh;
 }
 
 .dashboard {
     color: white;
     background-color: #3b82f6;
-    gap: 50px;
+    grid-row-gap: 50px;
     padding: 0px 20px 0 20px;
     height: 100%;
     grid-template-rows: 50px 250px 1fr;
@@ -29,7 +28,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 15% 85%;
-    gap: 20px;
+    grid-column-gap: 20px;
 }
 
 .logo>svg{
@@ -50,7 +49,7 @@
 .nav>ul>li, .nav-2>ul>li {
     display: grid;
     align-items: center;
-    gap:20px;
+    grid-column-gap:20px;
     grid-template-columns: 10% 90%;
     font-weight: bold;
     font-size: 1.2rem;
@@ -105,15 +104,12 @@
 .notifications{
 }
 
-.notifications>ul {
+.notifications {
     display: grid;
     justify-items: end;
     align-items: center;
-    grid-template-columns: 1fr 2fr 4fr;
-}
-
-.notifications>ul>li {
-    list-style: none;
+    grid-template-columns: 24px 36px 1fr;
+    grid-column-gap: 15px;
 }
 
 .user-bar {
@@ -130,7 +126,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 60px 1fr;
-    gap: 15px;
+    grid-column-gap: 15px;
     align-items: center;
 }
 
@@ -145,7 +141,7 @@
 .user-tools {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-column-gap: 30px;
     align-items: center;
     justify-items: end;
 }
@@ -186,7 +182,7 @@
 }
 
 .projects {
-    gap: 30px;
+    grid-gap: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
@@ -222,10 +218,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px -5px #888888;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     grid-row: 4;
     grid-column: 3;
     margin-right: 20px;
+    grid-row-gap:15px;
 }
 
 .announcements>div>p{
