@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
 
 .container {
     display: grid;
@@ -25,24 +33,24 @@
     grid-column: 1;
 }
 
-.logo{
+.logo {
     display: grid;
     align-items: center;
     grid-template-columns: 15% 85%;
     grid-column-gap: 20px;
 }
 
-.logo>svg{
+.logo>svg {
     width: 45px;
     height: 45px;
 }
 
-.logo>h1{
-    color: white!important;
+.logo>h1 {
+    color: white !important;
     font-size: clamp(1.1rem, 1.8vw, 1.6rem);
 }
 
-.logo:hover{
+.logo:hover {
     cursor: pointer;
     color: black;
 }
@@ -50,7 +58,7 @@
 .nav>ul>li, .nav-2>ul>li {
     display: grid;
     align-items: center;
-    grid-column-gap:20px;
+    grid-column-gap: 20px;
     grid-template-columns: 10% 90%;
     font-weight: bold;
     font-size: 1.2rem;
@@ -58,7 +66,7 @@
     line-height: 1.9;
 }
 
-.nav>ul>li:hover, .nav-2>ul>li:hover{
+.nav>ul>li:hover, .nav-2>ul>li:hover {
     color: black;
     cursor: pointer;
 }
@@ -74,13 +82,13 @@
     align-items: center;
 }
 
-.search-form{
+.search-form {
     display: grid;
     grid-template-columns: 5% 80%;
     align-items: center;
 }
 
-.search-form>button{
+.search-form>button {
     all: unset;
     grid-column: 1;
     grid-row: 1;
@@ -88,12 +96,13 @@
     width: 20px;
     height: 20px;
 }
-.search-form>button:hover{
+
+.search-form>button:hover {
     color: #3b82f6;
     cursor: pointer;
 }
 
-.search-form>input{
+.search-form>input {
     border: none;
     height: 25px;
     background-color: #f1f5f9;
@@ -130,12 +139,12 @@
     align-items: center;
 }
 
-.user-name>p{
+.user-name>p {
     font-weight: bold;
     font-size: clamp(0.8rem, 1vw, 0.7rem)
 }
 
-.user-name>h1{
+.user-name>h1 {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
@@ -150,14 +159,14 @@
 .user-tools>button {
     color: white;
     font-weight: bold;
-    border:none;
+    border: none;
     background-color: #3b82f6;
     border-radius: 20px;
     width: 80px;
     height: 40px;
 }
 
-.user-tools>button:hover{
+.user-tools>button:hover {
     color: black;
     cursor: pointer;
 }
@@ -194,6 +203,8 @@
 }
 
 .projects>.card {
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
     padding: 20px 15px;
     background-color: white;
     border-radius: 10px;
@@ -201,16 +212,24 @@
     box-shadow: 0 4px 10px -5px #888888;
 }
 
-.card>h2{
+.card>h2 {
     font-size: 1.1rem;
 }
-.card>p{
+
+.card>p {
     font-size: 0.9rem;
 }
 
-.card>:nth-child(3){
-    padding-top: 20px;
-    text-align: end;
+.card>:nth-child(3) {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    justify-content: end;
+    justify-items: end;
+    align-content: end;
+}
+
+.card>.card-tools>:hover {
+    filter: invert(44%) sepia(52%) saturate(1033%) hue-rotate(185deg) brightness(96%) contrast(101%);
 }
 
 .announcements {
@@ -223,14 +242,14 @@
     grid-row: 4;
     grid-column: 3;
     margin-right: 20px;
-    grid-row-gap:15px;
+    grid-row-gap: 15px;
 }
 
-.announcements>div>p{
+.announcements>div>p {
     font-size: 0.8rem;
 }
 
-.announcements>div>h2{
+.announcements>div>h2 {
     font-size: 0.9rem;
 }
 
@@ -252,7 +271,7 @@
     margin: 0 20px 70px 0;
 }
 
-.other-users{
+.other-users {
     display: grid;
     grid-template-columns: 10% 90%;
     justify-content: center;
